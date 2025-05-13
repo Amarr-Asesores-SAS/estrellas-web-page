@@ -19,6 +19,7 @@ import Switcher from './ModeSwitcher.astro'
 
 // Data
 import { navigationBarData } from '../../config/navigationBar'
+import HeaderLogo from './HeaderLogo.astro'
 const { logo, navItems, navActions } = navigationBarData
 
 // Determine current path
@@ -40,8 +41,7 @@ const savedNavActions = navActions.map((action) => ({
 		<nav aria-label="main navigation" role="navigation" class="header__nav">
 			<!-- Logo -->
 			<a href="/" class="header__logo">
-				<img src={logo.src} alt={logo.alt} width="256" height="256" />
-				<span>{logo.text}</span>
+				<HeaderLogo />
 			</a>
 
 			<!-- Menu toggle -->
