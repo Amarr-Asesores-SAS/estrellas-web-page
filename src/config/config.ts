@@ -21,13 +21,13 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle: 'Foxi. Tailwind CSS Astro Starter Kit by Oxygenna',
+	siteTitle: 'Estrellas Webcam',
 	siteDescription:
-		'Foxi is a design and development agency that specializes in creating beautiful and functional websites.',
-	ogImage: '/og.jpg',
+		'Estrellas Webcam es una empresa de asesoria y monetización de webcams. Te ayudamos a crecer y monetizar tu contenido.',
+	ogImage: '/og.jpeg',
 	logo: {
-		src: '/logo.svg',
-		alt: 'Foxi. logo'
+		src: '/logo-ew-simple.svg',
+		alt: 'Estrellas Webcam. logo'
 	},
 	canonical: true,
 	noindex: false,
