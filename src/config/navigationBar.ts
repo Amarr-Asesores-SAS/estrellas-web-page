@@ -33,25 +33,27 @@ export interface NavData {
 
 export const navigationBarData: NavData = {
 	logo: {
-		src: '/logo.svg',
+		src: '/logo-ew.svg',
 		alt: 'The tailwind astro theme',
-		text: 'Foxi.'
+		text: ''
 	},
 	navItems: [
-		{ name: 'Home', link: '/' },
-		{ name: 'Pricing', link: '/pricing' },
-		{ name: 'Features', link: '/features' },
+		{ name: 'Inicio', link: '/' },
+		{ name: 'Conócenos', link: '/pricing' },
+		{ name: 'Aliados', link: '/features' },
 		{
-			name: 'Resources',
+			name: 'Mas',
 			link: '#',
 			submenu: [
 				{ name: 'Blog', link: '/blog' },
-				{ name: 'Changelog', link: '/changelog' },
-				{ name: 'FAQ', link: '/faq' },
-				{ name: 'Terms', link: '/terms' }
+				{ name: 'Familia Estrellas Webcam', link: '/changelog' },
+				{ name: 'Beneficios', link: '/faq' },
+				{ name: 'Planes', link: '/terms' }
 			]
 		},
-		{ name: 'Contact', link: '/contact' }
+		{ name: 'Contacto', link: '/contact' }
 	],
-	navActions: [{ name: 'Try it now', link: '/', style: 'primary', size: 'lg' }]
+	navActions: [
+		{ name: 'SIGW', link: 'https://www.mistudiowebcam.com/sigw/', style: 'primary', size: 'lg' }
+	]
 }
