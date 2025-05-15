@@ -16,7 +16,7 @@ import AvatarGroup from '../../ui/AvatarGroup.astro'
 
 // Content
 // - Hero Image
-import heroImage from '../../../assets/hero-01.png'
+import heroImage from '@/assets/hero-astronauts.png'
 // - Avatars
 import user1 from '../../../assets/avatars/avatar-01.webp'
 import user2 from '../../../assets/avatars/avatar-02.webp'
@@ -28,29 +28,38 @@ const avatars = [
 ]
 ---
 
-<Section id="intro" padding="top" classes="bg-neutral-50 dark:bg-neutral-900 ">
-	<Row>
-		<Col span="2" />
-		<Col span="8" align="center">
-			<ChipNotification radius="rounded-full" classes="mb-6">
-				<strong>100+</strong> Estudios Asociados
-				<AvatarGroup avatars={avatars} radius="rounded-full" slot="button" />
-			</ChipNotification>
-			<h1>Aumente el <strong>rendimiento</strong> con los mejores</h1>
+<div class="flex h-screen flex-col justify-center">
+	<Image
+		src={heroImage}
+		loading="lazy"
+		quality="high"
+		width="1920"
+		alt="Astronautas trabajando en las estrellas"
+		format="webp"
+		class="mask-y-linear-70"
+	/>
+	<Section id="intro" padding="top" classes="bg-neutral-50 dark:bg-transparent">
+		<Row>
+			<Col span="2" />
+			<Col span="8" align="center">
+				<ChipNotification radius="rounded-full" classes="mb-6">
+					<strong>100+</strong> Estudios Asociados
+					<AvatarGroup avatars={avatars} radius="rounded-full" slot="button" />
+				</ChipNotification>
+				<h1>Aumente el <strong>rendimiento</strong> con los mejores</h1>
 
-			<p class="pb-0 text-lg">Trabaja inteligente, no duro</p>
-			<Button size="lg" link="/">Contactanos</Button>
-		</Col>
-		<Col span="2" />
-		<Col span="2" />
-		<Col span="8">
-			<Image
-				src={heroImage}
-				alt="Foxi. The tailwind astro theme"
-				class="translate-y-8 shadow-2xl shadow-neutral-200 dark:shadow-neutral-950"
-				format="webp"
-			/></Col
-		>
-		<Col span="2" />
-	</Row>
-</Section>
+				<p class="pb-0 text-lg">Trabaja inteligente, no duro</p>
+				<Button size="lg" link="/contact" classes="animate-bounce">Contáctanos</Button>
+			</Col>
+			<Col span="2" />
+			<Col span="2" />
+			<Col span="2" />
+		</Row>
+	</Section>
+</div>
+
+<style>
+	.mask-y-linear-70 {
+		mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+	}
+</style>

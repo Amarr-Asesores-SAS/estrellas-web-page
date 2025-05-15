@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import theme from "tailwindcss/defaultTheme";
 import defaultTheme from "tailwindcss/defaultTheme";
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -30,6 +31,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "stars-dark": "url('../assets/backgrounds/bg-img.jpg')",
+      },
       colors: {
         transparent: "transparent",
         primary: {

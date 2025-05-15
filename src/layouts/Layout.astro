@@ -34,7 +34,8 @@ const { title, description, ogImage, noindex } = Astro.props
 	<body
 		class:list={[
 			{ ['mode-' + `${configData.mode}`]: configData.mode },
-			{ ['scroll-animation']: configData.scrollAnimations }
+			{ ['scroll-animation']: configData.scrollAnimations },
+			'bg-stars-image'
 		]}
 	>
 		<GoogleTagManagerBody />
@@ -49,11 +50,7 @@ const { title, description, ogImage, noindex } = Astro.props
 </html>
 
 <style>
-	body {
-		background-image: url('../assets/backgrounds/bg-img.jpg');
-		background-repeat: no-repeat;
-		background-size: cover; /* La imagen cubre todo el contenedor */
-		background-position: center; /* Centra la imagen */
-		background-attachment: fixed; /* Opcional: fija la imagen al hacer scroll */
+	.bg-stars-image {
+		@apply dark:bg-stars-dark bg-cover bg-fixed bg-center bg-no-repeat;
 	}
 </style>
