@@ -32,7 +32,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "stars-dark": "url('../assets/backgrounds/bg-img.jpg')",
+        "stars-dark": "url('../assets/backgrounds/bg-img-dark.webp')",
+        stars: "url('../assets/backgrounds/bg-img.webp')",
       },
       colors: {
         transparent: "transparent",
