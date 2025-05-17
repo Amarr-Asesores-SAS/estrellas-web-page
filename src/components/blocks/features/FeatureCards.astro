@@ -13,42 +13,43 @@ import Card from '../../ui/cards/FeatureCard.astro'
 
 // Content
 // - Cards
-import feature01 from '../../../assets/cards/feature-01.svg'
-import feature02 from '../../../assets/cards/feature-02.svg'
-import feature03 from '../../../assets/cards/feature-03.svg'
-import feature04 from '../../../assets/cards/feature-04.svg'
-import feature05 from '../../../assets/cards/feature-05.svg'
+import feature01 from '@/assets/features/sigw.png'
+import feature02 from '@/assets/features/capacitaciones.png'
+import feature03 from '@/assets/features/asesorias.png'
+import feature04 from '@/assets/features/monetizacion.png'
+import feature05 from '@/assets/features/soporte.png'
 ---
 
 <Section id="features">
 	<Row>
 		<Col span="12" align="center" classes="mb-12 max-w-4xl mx-auto">
-			<h2 class="text-pretty">Innovative tools to <strong>transform</strong> your workflow</h2>
+			<h2 class="text-pretty">Somos innovación, <strong>apoyo</strong> y crecimiento</h2>
 			<p class="pb-0 text-lg">
-				Explore the suite of tools designed to streamline your workflow, enhance productivity, and
-				drive growth. Each product is crafted with precision to meet your needs and exceed your
-				expectations.
+				Con nuestra asesoría y acompañamiento profesional para estudios y modelos webcam con más de
+				10 años de experiencia en este universo, desarrollamos procesos a través de los cuales, se
+				adquieren, actualizan y desarrollan conocimientos, habilidades y actitudes para la
+				construcción y/u optimización de tu cosmos.
 			</p>
 		</Col>
 	</Row>
 	<Row>
 		<Col span="4">
 			<Card
-				title="All your data in one place"
-				subtitle="Stay on top of your tasks and deadlines with our intuitive project management tool. Visualize progress, assign tasks, and collaborate seamlessly."
+				title="Toda tu información en un solo lugar"
+				subtitle="Administra toda la información de tu estudio y modelos desde un mismo lugar. Con nuestro Sistema Integrado de Gestión Webcam, todo es mas fácil."
 				image={feature01}
-				link="/features"
+				link="https://www.mistudiowebcam.com/sigw/"
 			/>
 		</Col>
 		<Col span="4" classes="flex flex-col gap-6">
 			<Card
-				title="Organize & manage your projects "
-				subtitle="Stay on top of your tasks and deadlines with our intuitive project management tool. "
+				title="Capacitaciones"
+				subtitle="Conoce las mejores prácticas y herramientas para maximizar tus resultados."
 				image={feature02}
 				link="/features"
 			/>
 			<Card
-				title="Keep your team connected"
+				title="Asesorías"
 				subtitle="With our integrated chat platform share updates, files, and messages in a secure and user-friendly environment."
 				image={feature03}
 				link="/features"
@@ -56,14 +57,14 @@ import feature05 from '../../../assets/cards/feature-05.svg'
 		</Col>
 		<Col span="4" classes="flex flex-col gap-6">
 			<Card
-				title="Manage your customers"
-				subtitle="Build and nurture customer relationships with our powerful CRM system. "
+				title="Monetización"
+				subtitle="Monetiza con nosotros para tener los mejores porcentajes en en el tiempo correcto. "
 				image={feature04}
 				link="/features"
 			/>
 			<Card
-				title="Simplify your financial operations"
-				subtitle="Streamline your billing process with our easy-to-use invoicing tool. Create, send, and track invoices effortlessly."
+				title="Soporte técnico y de negocio"
+				subtitle="Cuenta con nuestro acompañamiento para resolver cualquier inconveniente técnico o de negocio que se te presente."
 				image={feature05}
 				link="/features"
 			/>
