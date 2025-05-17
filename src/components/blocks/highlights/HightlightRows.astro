@@ -28,8 +28,8 @@ type HighlightBlock = {
 }
 const highlightBlocks: HighlightBlock[] = [
 	{
-		title: 'Complete Project <strong>Visibility</strong>',
-		text: 'Gain complete visibility into your projects and tasks with our comprehensive dashboard. Easily track progress, deadlines, and team performance at a glance. Our dashboard offers real-time project tracking',
+		title: 'Capacitaciones <strong>personalizadas o grupales</strong>',
+		text: 'Te ofrecemos 5 capacitaciones personalizadas o grupales al mes, adaptadas a tus necesidades y objetivos específicos. Desde estrategias de marketing hasta técnicas de monetización, nuestro equipo de expertos está aquí para ayudarte a alcanzar el éxito.',
 		image: highlight01,
 		imageWidth: highlight01.width,
 		imageHeight: highlight01.height,
@@ -37,8 +37,8 @@ const highlightBlocks: HighlightBlock[] = [
 		imagePosition: 'right'
 	},
 	{
-		title: 'Advanced <strong>Automation</strong> Tools',
-		text: 'Automate repetitive tasks and streamline your workflow with our advanced automation tools. Save time and reduce errors by leveraging automated task assignments, workflow templates, and seamless integration with popular apps and services.',
+		title: 'Creación de perfiles <strong>ilimitados</strong>',
+		text: 'Nuestro equipo de expertos se encargara de la creación rápida y bajo los lineamientos de los camsites, asi podrás enfocarte en lo que realmente importa, tus modelos y su rápido crecimiento.',
 		image: highlight02,
 		mobileImage: highlight02mobile,
 		imageWidth: highlight02.width,
@@ -46,8 +46,8 @@ const highlightBlocks: HighlightBlock[] = [
 		imagePosition: 'left'
 	},
 	{
-		title: '<strong>Effective</strong> Team Collaboration',
-		text: 'Enhance team communication and collaboration with our seamless tools. Keep everyone on the same page and ensure efficient project execution through real-time messaging, shared document editing, and task comments. ',
+		title: '<strong>Soporte</strong> exclusivo',
+		text: 'Cuentas con canales de comunicación exclusivos para resolver tus dudas y consultas. Nuestro equipo de soporte está disponible para brindarte asistencia personalizada.',
 		image: highlight03,
 		mobileImage: highlight03mobile,
 		imageWidth: highlight03.width,
@@ -55,8 +55,26 @@ const highlightBlocks: HighlightBlock[] = [
 		imagePosition: 'right'
 	},
 	{
-		title: 'Robust Data <strong>Security</strong>',
-		text: 'Protect your data with our robust security features. We prioritize your privacy and security to ensure that your information is always safe. With end-to-end encryption, role-based access control, and regular security audits.',
+		title: 'Acceso a nuestra plataforma administrativa <strong>SIGW</strong>',
+		text: 'Tendrás acceso a nuestra plataforma de gestión administrativa, donde podrás gestionar tus modelos, realizar seguimiento de su rendimiento y acceder a informes detallados sobre su actividad y ganancias.',
+		image: highlight04,
+		mobileImage: highlight04mobile,
+		imageWidth: highlight04.width,
+		imageHeight: highlight04.height,
+		imagePosition: 'left'
+	},
+	{
+		title: '<strong>Descuentos</strong> en nuestros eventos',
+		text: 'Contaras con un descuento del 10% en nuestros eventos, donde podrás aprender de los mejores y compartir experiencias con otros modelos y estudios.',
+		image: highlight04,
+		mobileImage: highlight04mobile,
+		imageWidth: highlight04.width,
+		imageHeight: highlight04.height,
+		imagePosition: 'right'
+	},
+	{
+		title: 'Fotografía <strong>profesional</strong>',
+		text: 'Tus modelos podrán acceder a sesiones de fotos profesionales cada mes para mejorar su perfil y atraer más clientes. Nuestro equipo de fotografía se encargará de capturar la esencia de cada modelo y resaltar su belleza única.',
 		image: highlight04,
 		mobileImage: highlight04mobile,
 		imageWidth: highlight04.width,
@@ -66,18 +84,23 @@ const highlightBlocks: HighlightBlock[] = [
 ]
 ---
 
-{
-	highlightBlocks.map((highlight, key) => (
-		<TextImage
-			id={`highlight-${key}`}
-			title={highlight.title}
-			text={highlight.text}
-			image={highlight.image}
-			imageWidth={highlight.imageWidth}
-			imageHeight={highlight.imageHeight}
-			mobileImage={highlight.mobileImage}
-			imagePosition={highlight.imagePosition}
-			classes={key === 0 ? '!pb-0' : key === highlightBlocks.length - 1 ? '!pt-0' : '!py-0'}
-		/>
-	))
-}
+<div class="flex flex-col items-center justify-center">
+	<h2 class="text-pretty pt-16">Nuestros planes <strong>para ti</strong></h2>
+	<h3 class="text-pretty pt-16">Ruta del éxito <strong>empresarial 7%</strong></h3>
+
+	{
+		highlightBlocks.map((highlight, key) => (
+			<TextImage
+				id={`highlight-${key}`}
+				title={highlight.title}
+				text={highlight.text}
+				image={highlight.image}
+				imageWidth={highlight.imageWidth}
+				imageHeight={highlight.imageHeight}
+				mobileImage={highlight.mobileImage}
+				imagePosition={highlight.imagePosition}
+				classes={key === 0 ? '!pb-0' : key === highlightBlocks.length - 1 ? '!pt-0' : '!py-0'}
+			/>
+		))
+	}
+</div>
