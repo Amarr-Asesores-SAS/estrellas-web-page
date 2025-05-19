@@ -27,7 +27,7 @@ import Footer from './partials/Footer.astro'
 
 // Props
 type PricingTableProps = {
-	type:'basic' | 'featured'
+	type: 'basic' | 'featured'
 	header: {
 		title: string
 		subtitle: string
@@ -144,10 +144,10 @@ const { type, header, body, footer } = data
 
 <style>
 	.pricing {
-		@apply mx-auto max-w-sm overflow-hidden rounded border border-neutral-100 bg-white text-neutral-500 shadow-xl shadow-neutral-700/5 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300 dark:shadow-neutral-950/50 [&_.pricing\_\_header-subtitle]:text-neutral-400;
+		@apply mx-auto h-full max-w-sm overflow-hidden rounded border border-neutral-100 bg-white text-neutral-500 shadow-xl shadow-neutral-700/5 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300 dark:shadow-neutral-950/50 [&_.pricing\_\_header-subtitle]:text-neutral-400;
 	}
 	.pricing__container {
-		@apply flex flex-col;
+		@apply flex h-full flex-col justify-between;
 	}
 	.pricing__header-title {
 		@apply mb-0 text-xl font-bold text-neutral-700 dark:text-neutral-50 [&.pricing\_\_header-title--featured]:text-primary-50;

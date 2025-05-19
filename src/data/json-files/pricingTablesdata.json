@@ -1,76 +1,83 @@
 [
 	{
 		"header": {
-			"title": "Basic",
-			"subtitle": "Ideal for individual developers.",
+			"title": "Plan Empresarial",
+			"subtitle": "Plan ideal para cualquier estudio.",
 			"currency": "$",
-			"price": "19",
-			"priceLabel": "month, billed anually",
-			"priceMontly": "25",
-			"priceLabelMontly": "month",
-			"buttonName": "Try for free",
+			"price": "7%",
+			"priceLabel": "Periodo",
+			"priceMontly": "7%",
+			"priceLabelMontly": "comisión",
+			"buttonName": "Iniciemos Ya!",
 			"buttonLink": "/"
 		},
 		"body": {
 			"listItems": [
-				{ "listItem": "Join forces with fellow architects" },
-				{ "listItem": "Present your projects with flair and captivate your audience." },
-				{ "listItem": "Immerse yourself in the dynamic realm of architecture." }
+				{ "listItem": "Capacitaciones personalizadas." },
+				{ "listItem": "Soporte exclusivo en menos de 2 minutos." },
+				{ "listItem": "Exclusiva plataforma administrativa." },
+				{ "listItem": "Premios y bonos por producción" },
+				{ "listItem": "Asesor asignado para apoyo y mejora" },
+				{ "listItem": "Monetización de divisas" },
+				{ "listItem": "Y mas..." }
 			]
 		},
 		"footer": {
-			"buttonName": "See all features",
+			"buttonName": "Mira todos los beneficios",
 			"buttonLink": "/"
 		},
 		"type": "basic"
 	},
 	{
 		"header": {
-			"title": "Team",
-			"subtitle": "Ideal for small teams",
+			"title": "Arma tu plan",
+			"subtitle": "Construyamos tu plan ideal.",
 			"currency": "$",
-			"price": "29",
-			"priceLabel": "month, billed anually",
-			"priceMontly": "35",
+			"price": "Variable",
+			"priceLabel": "Periodo",
+			"priceMontly": "Variable",
 			"priceLabelMontly": "month",
-			"buttonName": "Try for free",
+			"buttonName": "Iniciemos Ya!",
 			"buttonLink": "/"
 		},
 		"body": {
 			"listItems": [
-				{ "listItem": "Join forces with fellow architects" },
-				{ "listItem": "Present your projects with flair and captivate your audience." },
-				{ "listItem": "Immerse yourself in the dynamic realm of architecture." },
-				{ "listItem": "Unlock endless inspiration" }
+				{ "listItem": "Soporte exclusivo en menos de 2 minutos." },
+				{ "listItem": "Exclusiva plataforma administrativa." },
+				{ "listItem": "Únete a esta constelación y encontremos el plan de tu conveniencia" }
 			]
 		},
 		"footer": {
-			"buttonName": "See all features",
+			"buttonName": "Mira todos los beneficios",
 			"buttonLink": "/"
 		},
 		"type": "featured"
 	},
 	{
 		"header": {
-			"title": "Enterprise",
-			"subtitle": "Ideal for companies",
+			"title": "Planes de Marketing",
+			"subtitle": "Mejora tu presencia de marca.",
 			"currency": "$",
-			"price": "49",
-			"priceLabel": "month, billed anually",
-			"priceMontly": "65",
+			"price": "Variable",
+			"priceLabel": "Periodo",
+			"priceMontly": "Variable",
 			"priceLabelMontly": "month",
-			"buttonName": "Try for free",
+			"buttonName": "Iniciemos Ya!",
 			"buttonLink": "/"
 		},
 		"body": {
 			"listItems": [
-				{ "listItem": "Join forces with fellow architects" },
-				{ "listItem": "Present your projects with flair and captivate your audience." },
-				{ "listItem": "Immerse yourself in the dynamic realm of architecture." }
+				{ "listItem": "Capacitación empresarial." },
+				{ "listItem": "Asesoría legal y documentación de legalización." },
+				{ "listItem": "Únete a esta constelación y encontremos el plan de tu conveniencia." },
+				{ "listItem": "Cuentas Master." },
+				{ "listItem": "Diseño de sitio web." },
+				{ "listItem": "Hosting y dominio." },
+				{ "listItem": "Logo Corporativo." }
 			]
 		},
 		"footer": {
-			"buttonName": "See all features",
+			"buttonName": "Mira todos los beneficios",
 			"buttonLink": "/"
 		},
 		"type": "basic"

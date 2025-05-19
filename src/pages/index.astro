@@ -6,7 +6,8 @@ import Layout from '../layouts/Layout.astro'
 import Hero from '../components/blocks/hero/HomeCTA.astro'
 import Features from '../components/blocks/features/FeatureCards.astro'
 import Testimonial from '../components/blocks/testimonials/BasicDark.astro'
-import HighlightBlocks from '../components/blocks/highlights/HightlightRows.astro'
+import Planes from '@/components/blocks/pricing/PricingColumns.astro'
+
 import CTA from '../components/blocks/CTA/BasicDark.astro'
 
 // Content
@@ -21,9 +22,10 @@ const SEO = {
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
-	<Hero />
+	<Hero />Mira todos los beneficios
 	<Features />
 	<Testimonial bg={testimonialBackground} bgPosition="right" />
-	<HighlightBlocks />
+	<Planes />
+	<!-- <HighlightBlocks /> -->
 	<CTA />
 </Layout>
