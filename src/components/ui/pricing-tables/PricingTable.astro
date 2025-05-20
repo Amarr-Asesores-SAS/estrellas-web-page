@@ -25,6 +25,9 @@ import Header from './partials/Header.astro'
 import Body from './partials/Body.astro'
 import Footer from './partials/Footer.astro'
 
+// Configs
+import { socialURLs } from '@/config/socialLinks'
+
 // Props
 type PricingTableProps = {
 	type: 'basic' | 'featured'
@@ -105,7 +108,8 @@ const { type, header, body, footer } = data
 				style={type === 'featured' ? 'secondary' : 'primary'}
 				elevated
 				type="link"
-				link={header.buttonLink}
+				link={socialURLs.whatsapp}
+				targetBlank
 			>
 				{header.buttonName}
 			</Button>

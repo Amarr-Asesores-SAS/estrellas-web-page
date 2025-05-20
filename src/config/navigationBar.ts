@@ -1,5 +1,8 @@
 // Navigation Bar
 // ------------
+
+import { socialURLs } from '@/config/socialLinks'
+
 // Description: The navigation bar data for the website.
 export interface Logo {
 	src: string
@@ -51,7 +54,7 @@ export const navigationBarData: NavData = {
 				{ name: 'Planes', link: '/terms' }
 			]
 		},
-		{ name: 'Contacto', link: '/contact' }
+		{ name: 'Contacto', link: socialURLs.whatsapp }
 	],
 	navActions: [
 		{ name: 'SIGW', link: 'https://www.mistudiowebcam.com/sigw/', style: 'primary', size: 'lg' }
