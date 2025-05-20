@@ -18,6 +18,7 @@ type Props = {
 	type?: 'link' | 'button' | 'submit' | 'reset'
 	size?: 'lg' | 'base' | 'sm'
 	link?: string
+	targetBlank?: boolean
 	modal?: string
 	style?: 'primary' | 'secondary' | 'neutral'
 	variation?: 'outline' | 'link'
@@ -28,6 +29,7 @@ const {
 	type = 'button',
 	size = 'base',
 	link,
+	targetBlank = false,
 	modal,
 	style = 'primary',
 	variation,
@@ -40,6 +42,7 @@ const {
 	type === 'link' || link ? (
 		<a
 			href={link}
+			target={targetBlank ? '_blank' : '_self'}
 			class:list={[
 				'button',
 				{ ['button--' + `${size}`]: size },
