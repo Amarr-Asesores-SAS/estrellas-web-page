@@ -18,6 +18,9 @@ import Highlight from '../../ui/Highlight.astro'
 // Content
 import ctaImage from '../../../assets/cta-dark-bg.webp'
 import badge from '../../../assets/badge.svg'
+
+// Config
+import { socialURLs } from '@/config/socialLinks'
 ---
 
 <Section>
@@ -35,7 +38,7 @@ import badge from '../../../assets/badge.svg'
 					<span class="hidden md:block">#1 Monetizadora de</span>
 					<Highlight classes="md:ml-2"> Colombia </Highlight>
 				</ChipNotification>
-				<Button size="lg" style="primary" link="/contact"> Únete Ya </Button>
+				<Button size="lg" style="primary" link={socialURLs.whatsapp} targetBlank> Únete Ya </Button>
 			</CTA>
 		</Col>
 		<Col span="1" />

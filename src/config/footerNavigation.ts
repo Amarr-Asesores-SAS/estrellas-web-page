@@ -1,6 +1,12 @@
 // Footer Navigation
 // ------------
+
+// Configs
+
+import { socialURLs } from './socialLinks'
+
 // Description: The footer navigation data for the website.
+
 export interface Logo {
 	src: string
 	alt: string
@@ -36,12 +42,11 @@ export interface FooterData {
 export const footerNavigationData: FooterData = {
 	footerAbout: {
 		title: 'Estrellas Webcam.',
-		aboutText:
-			'Expertly made, responsive, accessible components in React and HTML ready to be used on your website or app. Just copy and paste them on your Tailwind CSS project.',
+		aboutText: 'Somo una galaxia de estrellas que se unen para crear un universo de oportunidades',
 		logo: {
-			src: '/logo.svg',
-			alt: 'The tailwind astro theme',
-			text: 'Foxi.'
+			src: '/logo-ew-simple.svg',
+			alt: 'Estrellas Webcam',
+			text: 'Estrellas Webcam.'
 		}
 	},
 	footerColumns: [
@@ -91,16 +96,16 @@ export const footerNavigationData: FooterData = {
 			category: 'Get in touch',
 			subCategories: [
 				{
-					subCategory: 'Contact',
-					subCategoryLink: '/contact'
+					subCategory: 'Escríbenos',
+					subCategoryLink: socialURLs.whatsapp
 				},
 				{
-					subCategory: 'Support',
-					subCategoryLink: '/contact'
+					subCategory: 'Soporte',
+					subCategoryLink: socialURLs.whatsapp
 				},
 				{
-					subCategory: 'Join us',
-					subCategoryLink: '/contact'
+					subCategory: 'Únete',
+					subCategoryLink: socialURLs.whatsapp
 				}
 			]
 		}
