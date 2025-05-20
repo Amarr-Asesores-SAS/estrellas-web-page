@@ -10,18 +10,18 @@ export interface SocialLink {
 
 export const socialLinks: SocialLink[] = [
 	{
-		name: 'facebook',
-		link: '/',
-		icon: 'fb-icon'
+		name: 'WhatsApp',
+		link: 'https://wa.me/3104137626',
+		icon: 'whatsapp-icon'
 	},
 	{
-		name: 'twitter',
-		link: '/',
-		icon: 'twitter-icon'
+		name: 'Instagram',
+		link: 'https://www.instagram.com/comunidadew_/',
+		icon: 'instagram-icon'
 	},
 	{
-		name: 'discord',
-		link: '/',
-		icon: 'discord-icon'
+		name: 'Youtube',
+		link: 'https://www.youtube.com/@Estrellaswbc',
+		icon: 'yt-icon'
 	}
 ]
