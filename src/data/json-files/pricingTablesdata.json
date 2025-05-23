@@ -28,31 +28,7 @@
 		},
 		"type": "basic"
 	},
-	{
-		"header": {
-			"title": "Arma tu plan",
-			"subtitle": "Construyamos tu plan ideal.",
-			"currency": "$",
-			"price": "Variable",
-			"priceLabel": "Periodo",
-			"priceMontly": "Variable",
-			"priceLabelMontly": "month",
-			"buttonName": "Iniciemos Ya!",
-			"buttonLink": "/"
-		},
-		"body": {
-			"listItems": [
-				{ "listItem": "Soporte exclusivo en menos de 2 minutos." },
-				{ "listItem": "Exclusiva plataforma administrativa." },
-				{ "listItem": "Únete a esta constelación y encontremos el plan de tu conveniencia" }
-			]
-		},
-		"footer": {
-			"buttonName": "Mira todos los beneficios",
-			"buttonLink": "/"
-		},
-		"type": "featured"
-	},
+
 	{
 		"header": {
 			"title": "Planes de Marketing",
@@ -80,6 +56,6 @@
 			"buttonName": "Mira todos los beneficios",
 			"buttonLink": "/"
 		},
-		"type": "basic"
+		"type": "featured"
 	}
 ]

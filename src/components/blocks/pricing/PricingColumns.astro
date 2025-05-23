@@ -58,10 +58,7 @@ const pricingData: PricingTableData[] = pricingTablesData as PricingTableData[]
 					</span>
 
 					<Toggle id="pricingType" label="pricing" showLabel={false} checked={true} />
-					<span
-						class="font-semibold text-neutral-400 text-primary-500 transition-colors"
-						id="annualLabel"
-					>
+					<span class="font-semibold text-primary-500 transition-colors" id="annualLabel">
 						Bill annually
 					</span>
 				</Col>
@@ -69,7 +66,7 @@ const pricingData: PricingTableData[] = pricingTablesData as PricingTableData[]
 		}
 		{
 			pricingData.map((item, key) => (
-				<Col span="4">
+				<Col span="6">
 					<PricingTable data={item} listType="checklist" id={`plan-${key}`} />
 				</Col>
 			))
