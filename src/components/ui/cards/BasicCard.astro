@@ -40,7 +40,10 @@ const { title = '', subtitle, titleSize = 'lg', image, icon, link, type, classes
 			<Image
 				src={image}
 				alt={title}
-				class:list={[type === 'image-bottom' ? 'order-2' : '', 'rounded-lg']}
+				class:list={[
+					type === 'image-bottom' ? 'order-2' : '',
+					'drop-shadow-cm h-full w-full rounded-lg object-cover object-center'
+				]}
 				width={600}
 				height={400}
 				quality="mid"
@@ -69,5 +72,11 @@ const { title = '', subtitle, titleSize = 'lg', image, icon, link, type, classes
 <style>
 	.card__icon {
 		@apply inline-block size-6 shrink-0 text-primary-500;
+	}
+
+	.drop-shadow-cm {
+		--tw-drop-shadow: drop-shadow(1rem 0.1rem 16px #fae0ae);
+		filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale)
+			var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 	}
 </style>
