@@ -14,7 +14,7 @@
 // - classes: additional classes
 
 // Props
-type BgProps =  {
+type BgProps = {
 	src: string
 	width: number
 	height: number
@@ -67,7 +67,7 @@ const bgStyle = bg
 		{ [`${classes}`]: classes }
 	]}
 >
-	<div class="section__bg" style={bgStyle}></div>
+	<div class="section__bg !bg-contain bg-no-repeat" style={bgStyle}></div>
 	<div class="container">
 		<slot />
 	</div>
