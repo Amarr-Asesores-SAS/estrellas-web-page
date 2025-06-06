@@ -19,11 +19,12 @@
 import Section from '../../ui/Section.astro'
 import Row from '../../ui/Row.astro'
 import Col from '../../ui/Col.astro'
+import { Image } from 'astro:assets'
 
 // Props
 type Props = {
-	id?: string
-	title?: string
+	id: string
+	title: string
 	image?: any
 	imageWidth?: number
 	imageHeight?: number
@@ -35,14 +36,14 @@ type Props = {
 }
 const {
 	id,
-	title ,
-	image ,
+	title,
+	image,
 	imageWidth,
 	imageHeight,
 	mobileImage,
 	imagePosition = 'right',
-	text ,
-	classes ,
+	text,
+	classes,
 	offsetImage = false
 } = Astro.props
 ---
@@ -54,7 +55,15 @@ const {
 				class=`text-image__picture ${offsetImage  ? 'text-image__picture--offset' : ''} ${imagePosition === 'right' ? 'text-image__picture--offset-right' : ''}`
 			>
 				{mobileImage && <source srcset={mobileImage.src} media="(max-width: 1024px)" />}
-				<img src={image.src} alt={title} width={imageWidth} height={imageHeight} />
+				<Image
+					src={image}
+					alt={title}
+					width={imageWidth}
+					height={imageHeight}
+					quality="mid"
+					format="webp"
+					class="rounded-md"
+				/>
 			</picture>
 		</Col>
 		<Col span="6" classes={`self-center ${imagePosition === 'right' ? 'lg:-order-1' : ''}`}>

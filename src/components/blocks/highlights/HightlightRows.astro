@@ -8,14 +8,12 @@
 import TextImage from '../basic/TextImage.astro'
 
 // Content
-import highlight01 from '../../../assets/highlights/highlight-01.svg'
-import highlight01mobile from '../../../assets/highlights/highlight-01-mobile.svg'
-import highlight02 from '../../../assets/highlights/highlight-02.svg'
-import highlight02mobile from '../../../assets/highlights/highlight-02-mobile.svg'
-import highlight03 from '../../../assets/highlights/highlight-03.svg'
-import highlight03mobile from '../../../assets/highlights/highlight-03-mobile.svg'
-import highlight04 from '../../../assets/highlights/highlight-04.svg'
-import highlight04mobile from '../../../assets/highlights/highlight-04-mobile.svg'
+import trainings from '@/assets/features/vertical/capacitaciones.png'
+import photographic from '@/assets/features/vertical/fotografia.png'
+import sales from '@/assets/features/vertical/promos.png'
+import support from '@/assets/features/vertical/soporte.png'
+import profiles from '@/assets/features/vertical/perfiles.png'
+import sigw from '@/assets/features/sigw.png'
 
 type HighlightBlock = {
 	title: string
@@ -26,59 +24,64 @@ type HighlightBlock = {
 	imageHeight: number
 	imagePosition: 'left' | 'right'
 }
+
+const processImgSize = (size: number): number => {
+	return size / 10
+}
+
 const highlightBlocks: HighlightBlock[] = [
 	{
 		title: 'Capacitaciones <strong>personalizadas o grupales</strong>',
 		text: 'Te ofrecemos 5 capacitaciones personalizadas o grupales al mes, adaptadas a tus necesidades y objetivos específicos. Desde estrategias de marketing hasta técnicas de monetización, nuestro equipo de expertos está aquí para ayudarte a alcanzar el éxito.',
-		image: highlight01,
-		imageWidth: highlight01.width,
-		imageHeight: highlight01.height,
-		mobileImage: highlight01mobile,
+		image: trainings,
+		imageWidth: processImgSize(trainings.width),
+		imageHeight: processImgSize(trainings.height),
+		mobileImage: trainings,
 		imagePosition: 'right'
 	},
 	{
 		title: 'Creación de perfiles <strong>ilimitados</strong>',
 		text: 'Nuestro equipo de expertos se encargara de la creación rápida y bajo los lineamientos de los camsites, asi podrás enfocarte en lo que realmente importa, tus modelos y su rápido crecimiento.',
-		image: highlight02,
-		mobileImage: highlight02mobile,
-		imageWidth: highlight02.width,
-		imageHeight: highlight02.height,
+		image: profiles,
+		mobileImage: profiles,
+		imageWidth: processImgSize(profiles.width),
+		imageHeight: processImgSize(profiles.height),
 		imagePosition: 'left'
 	},
 	{
 		title: '<strong>Soporte</strong> exclusivo',
 		text: 'Cuentas con canales de comunicación exclusivos para resolver tus dudas y consultas. Nuestro equipo de soporte está disponible para brindarte asistencia personalizada en menos de 2 minutos',
-		image: highlight03,
-		mobileImage: highlight03mobile,
-		imageWidth: highlight03.width,
-		imageHeight: highlight03.height,
+		image: support,
+		mobileImage: support,
+		imageWidth: processImgSize(support.width),
+		imageHeight: processImgSize(support.height),
 		imagePosition: 'right'
 	},
 	{
 		title: 'Acceso a nuestra plataforma administrativa <strong>SIGW</strong>',
 		text: 'Tendrás acceso a nuestra plataforma de gestión administrativa, donde podrás gestionar tus modelos, realizar seguimiento de su rendimiento y acceder a informes detallados sobre su actividad y ganancias.',
-		image: highlight04,
-		mobileImage: highlight04mobile,
-		imageWidth: highlight04.width,
-		imageHeight: highlight04.height,
+		image: sigw,
+		mobileImage: sigw,
+		imageWidth: processImgSize(sigw.width),
+		imageHeight: processImgSize(sigw.height),
 		imagePosition: 'left'
 	},
 	{
 		title: '<strong>Descuentos</strong> en nuestros eventos',
 		text: 'Contaras con un descuento del 10% en nuestros eventos, donde podrás aprender de los mejores y compartir experiencias con otros modelos y estudios.',
-		image: highlight04,
-		mobileImage: highlight04mobile,
-		imageWidth: highlight04.width,
-		imageHeight: highlight04.height,
+		image: sales,
+		mobileImage: sales,
+		imageWidth: processImgSize(sales.width),
+		imageHeight: processImgSize(sales.height),
 		imagePosition: 'right'
 	},
 	{
 		title: 'Fotografía <strong>profesional</strong>',
 		text: 'Puedes incluir este servicio a tu plan y tus modelos podrán acceder a sesiones de fotos profesionales cada mes para mejorar su perfil y atraer más clientes. Nuestro equipo de fotografía se encargará de capturar la esencia de cada modelo y resaltar su belleza única.',
-		image: highlight04,
-		mobileImage: highlight04mobile,
-		imageWidth: highlight04.width,
-		imageHeight: highlight04.height,
+		image: photographic,
+		mobileImage: photographic,
+		imageWidth: processImgSize(photographic.width),
+		imageHeight: processImgSize(photographic.height),
 		imagePosition: 'left'
 	}
 ]
