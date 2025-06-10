@@ -6,27 +6,27 @@ import Layout from '../layouts/Layout.astro'
 // - UI
 import Hero from '../components/blocks/hero/PageHeader.astro'
 import SimpleFeed from '../components/blocks/feeds/BasicFeed.astro'
-import CTA from '../components/blocks/CTA/BasicLight.astro'
 
 // Data
-import feedData from '../data/json-files/changelogData.json'
+import { timeLineData } from '@/data/complex-array-data/timeLineData'
+import CTA from '../components/blocks/CTA/BasicDark.astro'
 
 // Content
 // - SEO
 const SEO = {
-	title: 'Foxi | Version Updates and Improvements',
+	title: 'EW | Conócenos',
 	description:
-		"Explore Foxi's powerful features designed to enhance productivity, ensure top-notch security, and integrate seamlessly with your favorite tools. Join thousands of satisfied users and transform your workflow with Foxi today!"
+		'Esta es un poco de nuestro recorrido con el cual hemos formado nuestra historia, y queremos que tu hagas parte de ella.'
 }
 // - Page Header
 const header = {
-	title: 'Foxi Version Updates and <strong>Enhancements</strong>',
-	text: 'Stay informed about all the new updates and improvements in Foxi.'
+	title: 'Somos <strong>Estrellas Webcam</strong>',
+	text: 'Conoce nuestra historia y haz parte de ella.'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero title={header.title} text={header.text} />
-	<SimpleFeed data={feedData} />
+	<SimpleFeed data={timeLineData} />
 	<CTA />
 </Layout>
