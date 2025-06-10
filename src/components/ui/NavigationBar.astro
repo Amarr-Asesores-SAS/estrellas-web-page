@@ -20,7 +20,7 @@ import Switcher from './ModeSwitcher.astro'
 // Data
 import { navigationBarData } from '../../config/navigationBar'
 import HeaderLogo from './HeaderLogo.astro'
-const { logo, navItems, navActions } = navigationBarData
+const { navItems, navActions } = navigationBarData
 
 // Determine current path
 const path = new URL(Astro.request.url).pathname
