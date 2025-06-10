@@ -51,49 +51,29 @@ export const footerNavigationData: FooterData = {
 	},
 	footerColumns: [
 		{
-			category: 'Product',
+			category: 'Planes',
 			subCategories: [
 				{
-					subCategory: 'Features',
-					subCategoryLink: '/features'
+					subCategory: 'Empresarial',
+					subCategoryLink: '/empresarial'
 				},
 				{
-					subCategory: 'FAQ',
-					subCategoryLink: '/faq'
-				},
-				{
-					subCategory: 'Pricing',
-					subCategoryLink: '/pricing'
-				},
-				{
-					subCategory: 'Changelog',
-					subCategoryLink: '/changelog'
-				},
-				{
-					subCategory: 'Terms',
-					subCategoryLink: '/terms'
+					subCategory: 'otros',
+					subCategoryLink: '/planes'
 				}
 			]
 		},
 		{
-			category: 'About us',
+			category: 'Nosotros',
 			subCategories: [
 				{
-					subCategory: 'About us',
-					subCategoryLink: '/'
-				},
-				{
-					subCategory: 'News',
-					subCategoryLink: '/blog'
-				},
-				{
-					subCategory: 'Careers',
-					subCategoryLink: '/blog'
+					subCategory: 'Conócenos',
+					subCategoryLink: '/conocenos'
 				}
 			]
 		},
 		{
-			category: 'Get in touch',
+			category: 'Estamos a un click',
 			subCategories: [
 				{
 					subCategory: 'Escríbenos',
