@@ -49,9 +49,9 @@ export const navigationBarData: NavData = {
 			link: '#',
 			submenu: [
 				{ name: 'Blog', link: '/blog' },
-				{ name: 'Familia Estrellas Webcam', link: '/changelog' },
-				{ name: 'Beneficios', link: '/faq' },
-				{ name: 'Planes', link: '/terms' }
+				{ name: 'Familia Estrellas Webcam', link: '/familia' },
+				{ name: 'Beneficios', link: '/beneficios' },
+				{ name: 'Planes', link: '/planes' }
 			]
 		},
 		{ name: 'Contacto', link: socialURLs.whatsapp }

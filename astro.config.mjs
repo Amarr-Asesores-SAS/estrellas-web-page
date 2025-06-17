@@ -7,7 +7,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://foxi.netlify.app/",
+  site: "https://estrellaswebcam.com/",
   integrations: [
     tailwind(),
     icon(),
@@ -18,4 +18,9 @@ export default defineConfig({
       },
     }),
   ],
+  redirects: {
+    "/blog": "/mantenimiento",
+    "/familia": "/mantenimiento",
+    "/beneficios": "/mantenimiento",
+  },
 });
