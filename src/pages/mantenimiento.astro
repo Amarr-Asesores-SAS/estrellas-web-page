@@ -1,0 +1,41 @@
+---
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+import Section from '../components/ui/Section.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+// - UI
+import Spacer from '../components/ui/Spacer.astro'
+import Button from '../components/ui/Button.astro'
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+
+import maintenance from '../assets/features/soporte.png'
+
+// Content
+// - SEO
+const SEO = {
+	title: 'EW | Pagina en mantenimiento',
+	description: 'Estamos trabajando para estar de vuelta pronto'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Section classes="flex flex-col items-center justify-center">
+		<Image
+			src={maintenance}
+			alt="Mantenimiento"
+			width={1080}
+			height={720}
+			quality="high"
+			loading="lazy"
+			format="webp"
+			class="mx-auto w-2/3 rounded-lg object-cover object-center"
+		/>
+		<div class="flex w-full flex-col items-center justify-center pt-8">
+			<h1 class="text-center">Estamos trabajando para tener pronto esta pagina disponible</h1>
+			<Button link="/" classes="mx-auto"> Regresar <Icon name="long-arrow-right" /> </Button>
+		</div>
+	</Section>
+</Layout>
