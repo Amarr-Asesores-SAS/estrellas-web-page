@@ -9,7 +9,7 @@ export interface SocialLink {
 }
 
 export const socialURLs = {
-	whatsapp: 'https://wa.me/3104137626',
+	whatsapp: 'https://wa.link/g7i77s',
 	instagram: 'https://www.instagram.com/comunidadew_/',
 	youtube: 'https://www.youtube.com/@Estrellaswbc'
 }

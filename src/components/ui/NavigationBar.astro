@@ -68,6 +68,7 @@ const savedNavActions = navActions.map((action) => ({
 									href={item.link}
 									role="menuitem"
 									class={`header__menu-link ${isActivePath(item.link) ? 'active' : ''}`}
+									target={item.target ?? '_self'}
 								>
 									{item.name}
 								</a>

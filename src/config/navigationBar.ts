@@ -19,6 +19,7 @@ export interface NavItem {
 	name: string
 	link: string
 	submenu?: NavSubItem[]
+	target?: '_blank' | '_self'
 }
 
 export interface NavAction {
@@ -54,7 +55,7 @@ export const navigationBarData: NavData = {
 				{ name: 'Planes', link: '/planes' }
 			]
 		},
-		{ name: 'Contacto', link: socialURLs.whatsapp }
+		{ name: 'Contacto', link: socialURLs.whatsapp, target: '_blank' }
 	],
 	navActions: [
 		{ name: 'SIGW', link: 'https://www.mistudiowebcam.com/sigw/', style: 'primary', size: 'lg' }
