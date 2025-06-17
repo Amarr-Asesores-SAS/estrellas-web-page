@@ -22,5 +22,6 @@ export default defineConfig({
     "/blog": "/mantenimiento",
     "/familia": "/mantenimiento",
     "/beneficios": "/mantenimiento",
+    "/aliados": "/mantenimiento",
   },
 });

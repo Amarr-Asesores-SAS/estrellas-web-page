@@ -43,7 +43,7 @@ export const navigationBarData: NavData = {
 	navItems: [
 		{ name: 'Inicio', link: '/' },
 		{ name: 'Conócenos', link: '/conocenos' },
-		{ name: 'Aliados', link: '/features' },
+		{ name: 'Aliados', link: '/aliados' },
 		{
 			name: 'Mas',
 			link: '#',
