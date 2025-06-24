@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import partytown from "@astrojs/partytown";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 
 import sitemap from "@astrojs/sitemap";
@@ -9,7 +9,6 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://estrellaswebcam.com/",
   integrations: [
-    tailwind(),
     icon(),
     sitemap(),
     partytown({
@@ -18,6 +17,9 @@ export default defineConfig({
       },
     }),
   ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   redirects: {
     "/blog": "/mantenimiento",
     "/familia": "/mantenimiento",
