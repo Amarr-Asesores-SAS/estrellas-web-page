@@ -50,7 +50,8 @@ const { title, description, ogImage, noindex } = Astro.props
 </html>
 
 <style>
+	@reference '@/styles/global.css';
 	.bg-stars-image {
-		@apply bg-stars bg-cover bg-fixed bg-center bg-no-repeat dark:bg-stars-dark;
+		@apply bg-stars dark:bg-stars-dark bg-cover bg-fixed bg-center bg-no-repeat;
 	}
 </style>
