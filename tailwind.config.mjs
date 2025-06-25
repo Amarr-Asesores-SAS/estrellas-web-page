@@ -2,7 +2,6 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-  darkMode: ["selector"],
   safelist: [
     {
       pattern: /col-span-(\d+)/,
@@ -30,78 +29,10 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "stars-dark": "url('../assets/backgrounds/bg-img-dark.webp')",
-        stars: "url('../assets/backgrounds/bg-img.webp')",
-      },
-      colors: {
-        transparent: "transparent",
-        primary: {
-          50: "#fef9ee",
-          100: "#fdf1d7",
-          200: "#fae0ae",
-          300: "#f7c87a",
-          400: "#f3a744",
-          500: "#f0932d",
-          600: "#e07216",
-          700: "#ba5714",
-          800: "#944518",
-          900: "#773a17",
-          950: "#401b0a",
-        },
-        neutral: {
-          50: "#f8fafc",
-          100: "#f1f5f9",
-          200: "#e2e8f0",
-          300: "#cbd5e1",
-          400: "#94a3b8",
-          500: "#64748b",
-          600: "#475569",
-          700: "#334155",
-          800: "#1e293b",
-          900: "#0f172a",
-          950: "#020617",
-        },
-      },
-      cursor: {
-        fancy: "url(https://www.svgrepo.com/show/269/color-picker.svg)",
-      },
       fontFamily: {
         sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
         headings: ["Outfit Variable", ...defaultTheme.fontFamily.sans],
       },
-      keyframes: {
-        dropdown: {
-          "0%": { transform: "translateY(-1rem)", opacity: 0 },
-          "100%": { transform: "translateY(0)", opacity: 1 },
-        },
-        fadeInShadowLight: {
-          "100%": {
-            boxShadow:
-              "0 20px 25px -5px rgba(15, 23, 42, .025), 0 8px 10px -6px rgba(15, 23, 42, .025);",
-          },
-        },
-        fadeInShadowDark: {
-          "100%": {
-            boxShadow:
-              "0 20px 25px -5px rgba(2, 6, 23, .25), 0 8px 10px -6px rgba(2, 6, 23, .25);",
-          },
-        },
-      },
-      animation: {
-        dropdown: "dropdown 300ms ease-in-out forwards",
-        fadeInShadowLight: "fadeInShadowLight 500ms ease-in-out forwards",
-        fadeInShadowDark: "fadeInShadowDark 500ms ease-in-out forwards",
-      },
     },
   },
-  variants: {
-    animation: ["responsive"],
-  },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("tailwindcss/plugin")(function ({ addVariant }) {
-      addVariant("dark-me", ".dark_&");
-    }),
-  ],
 };

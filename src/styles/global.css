@@ -1,4 +1,93 @@
 @import 'tailwindcss';
+@config '@/../tailwind.config.mjs';
+
+@plugin "@tailwindcss/typography";
+
+@variant dark-me (.dark_&);
+
+@theme {
+	/* DarkMode */
+	--color-dark: selector;
+
+	/* background-image by theme */
+	--background-image-stars-dark: url('../assets/backgrounds/bg-img-dark.webp');
+	--background-image-stars: url('../assets/backgrounds/bg-img.webp');
+
+	/* Animaciones (de la migración anterior) */
+	--animate-dropdown: dropdown 300ms ease-in-out forwards;
+	--animate-fadeInShadowLight: fadeInShadowLight 500ms ease-in-out forwards;
+	--animate-fadeInShadowDark: fadeInShadowDark 500ms ease-in-out forwards;
+
+	/* Colores (de la migración anterior) */
+	--color-transparent: transparent;
+	/* Primary palette */
+	--color-primary-50: oklch(0.9789 0.0169 81.93); /* #fef9ee */
+	--color-primary-100: oklch(0.9501 0.0377 82.85); /* #fdf1d7 */
+	--color-primary-200: oklch(0.8982 0.0686 83.67); /* #fae0ae */
+	--color-primary-300: oklch(0.8333 0.1007 83.73); /* #f7c87a */
+	--color-primary-400: oklch(0.7478 0.1328 83.14); /* #f3a744 */
+	--color-primary-500: oklch(0.7029 0.1463 79.74); /* #f0932d */
+	--color-primary-600: oklch(0.6197 0.1485 69.07); /* #e07216 */
+	--color-primary-700: oklch(0.5206 0.1263 59.19); /* #ba5714 */
+	--color-primary-800: oklch(0.4382 0.0988 49.97); /* #944518 */
+	--color-primary-900: oklch(0.3744 0.0876 46.36); /* #773a17 */
+	--color-primary-950: oklch(0.2479 0.0565 38.88); /* #401b0a */
+	/* Neutral palette */
+	--color-neutral-50: oklch(0.9808 0.0065 252.23); /* #f8fafc */
+	--color-neutral-100: oklch(0.9602 0.0086 252.23); /* #f1f5f9 */
+	--color-neutral-200: oklch(0.9128 0.0148 252.23); /* #e2e8f0 */
+	--color-neutral-300: oklch(0.8547 0.0209 252.23); /* #cbd5e1 */
+	--color-neutral-400: oklch(0.7043 0.0258 252.23); /* #94a3b8 */
+	--color-neutral-500: oklch(0.5508 0.0262 252.23); /* #64748b */
+	--color-neutral-600: oklch(0.4527 0.0262 252.23); /* #475569 */
+	--color-neutral-700: oklch(0.3744 0.0262 252.23); /* #334155 */
+	--color-neutral-800: oklch(0.2861 0.0262 252.23); /* #1e293b */
+	--color-neutral-900: oklch(0.2089 0.0262 252.23); /* #0f172a */
+	--color-neutral-950: oklch(0.1118 0.0262 252.23); /* #020617 */
+
+	/* Cursor */
+	--cursor-fancy: url(https://www.svgrepo.com/show/269/color-picker.svg);
+}
+
+@keyframes dropdown {
+	0% {
+		transform: translateY(-1rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInShadowLight {
+	100% {
+		box-shadow:
+			0 20px 25px -5px rgba(15, 23, 42, 0.025),
+			0 8px 10px -6px rgba(15, 23, 42, 0.025);
+	}
+}
+
+@keyframes fadeInShadowDark {
+	100% {
+		box-shadow:
+			0 20px 25px -5px rgba(2, 6, 23, 0.25),
+			0 8px 10px -6px rgba(2, 6, 23, 0.25);
+	}
+}
+
+@utility animate-dropdown {
+	animation: var(--animate-dropdown);
+}
+@utility animate-fadeInShadowLight {
+	animation: var(--animate-fadeInShadowLight);
+}
+@utility animate-fadeInShadowDark {
+	animation: var(--animate-fadeInShadowDark);
+}
+@utility peer-required-after-required {
+	@apply peer-required:after:text-red-500 peer-required:after:content-['\00a0*'];
+}
 
 /* Layout rules */
 html {
