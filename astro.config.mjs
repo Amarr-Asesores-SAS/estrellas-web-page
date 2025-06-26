@@ -5,18 +5,16 @@ import icon from "astro-icon";
 
 import sitemap from "@astrojs/sitemap";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://estrellaswebcam.com/",
-  integrations: [
-    icon(),
-    sitemap(),
-    partytown({
-      config: {
-        forward: ["dataLayer.push"],
-      },
-    }),
-  ],
+  integrations: [icon(), sitemap(), partytown({
+    config: {
+      forward: ["dataLayer.push"],
+    },
+  }), react()],
   vite: {
     plugins: [tailwindcss()],
   },
