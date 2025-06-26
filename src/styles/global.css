@@ -9,10 +9,9 @@
 @source inline("font-{thin,extralight,light,normal,medium,semibold,bold,extrabold,black}");
 @source inline("text-{left,center,right}");
 
-@theme {
-	/* DarkMode */
-	--color-dark: selector;
+@custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
 	/* background-image by theme */
 	--background-image-stars-dark: url('../assets/backgrounds/bg-img-dark.webp');
 	--background-image-stars: url('../assets/backgrounds/bg-img.webp');
@@ -92,6 +91,3 @@
 @utility peer-required-after-required {
 	@apply peer-required:after:text-red-500 peer-required:after:content-['\00a0*'];
 }
-
-@variant dark-me (.dark_&);
-@variant light-me (.light_&);
