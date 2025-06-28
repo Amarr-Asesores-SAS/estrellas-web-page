@@ -1,11 +1,4 @@
-import {
-	Card,
-	CardAction,
-	CardContent,
-	CardFooter,
-	CardHeader,
-	CardTitle
-} from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import type { ITrainingItem } from './Interfaces'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
@@ -19,7 +12,7 @@ export const TrainingsCollectionCards = ({ items }: Props) => {
 			{items.map((item, index) => {
 				const isRight = index % 2 !== 0 ? true : false
 				return (
-					<Card className="my-1">
+					<Card className="my-1" key={item.title}>
 						<div className={`flex justify-between ${isRight ? 'flex-row-reverse' : ''}`}>
 							<CardHeader className="flex w-full flex-col items-center justify-center">
 								<Avatar className="h-28 w-28">
