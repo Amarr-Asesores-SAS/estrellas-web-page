@@ -2,6 +2,7 @@ import Business from './Business'
 import type { ITrainingCollection } from './Interfaces'
 import ModelsTrainings from './ModelsTrainings'
 import ModelTrainingPack from './ModelTrainingPack'
+import MonitorTrainingPack from './MonitorTrainingPack'
 
 export const trainingItems: ITrainingCollection[] = [
 	{
@@ -13,7 +14,11 @@ export const trainingItems: ITrainingCollection[] = [
 		content: ModelsTrainings
 	},
 	{
-		title: 'Entrenamiento para modelos (Pack)',
+		title: 'Entrenamiento para Modelos (Pack)',
 		content: ModelTrainingPack
+	},
+	{
+		title: 'Entrenamiento para Monitores (Pack)',
+		content: MonitorTrainingPack
 	}
 ]
