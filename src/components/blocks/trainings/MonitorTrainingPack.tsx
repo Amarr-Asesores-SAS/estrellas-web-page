@@ -1,13 +1,19 @@
 import type { ITrainingItem } from './Interfaces'
 import { TrainingsCollectionCards } from './TrainingsCollectionCards'
 
+import astronautMedal from '@/assets/medals/medal-astronaut.png'
+import moneyMedal from '@/assets/medals/medal-money.png'
+import spacecraftMedal from '@/assets/medals/medal-spacecraft.png'
+import starMedal from '@/assets/medals/medal-star.png'
+import webcamMedal from '@/assets/medals/medal-webcam.png'
+
 const items: ITrainingItem[] = [
 	{
 		title: 'Herramientas operativas de las',
 		titleStrong: 'plataformas',
 		description:
 			'Domina herramientas y software para optimizar operaciones y gestionar plataformas webcam.',
-		imgSrc: 'https://picsum.photos/148',
+		imgSrc: astronautMedal.src,
 		imgFallback: 'HP'
 	},
 	{
@@ -15,7 +21,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'perfilación',
 		description:
 			'Aprende técnicas de entrevista para seleccionar y perfilar modelos con alto potencial.',
-		imgSrc: 'https://picsum.photos/149',
+		imgSrc: moneyMedal.src,
 		imgFallback: 'EP'
 	},
 	{
@@ -23,7 +29,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'modelos',
 		description:
 			'Desarrolla estrategias de marketing para aumentar la visibilidad y éxito de los modelos.',
-		imgSrc: 'https://picsum.photos/150',
+		imgSrc: spacecraftMedal.src,
 		imgFallback: 'MM'
 	},
 	{
@@ -31,7 +37,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'monitor',
 		description:
 			'Conoce las responsabilidades clave de un monitor para garantizar el éxito de los modelos.',
-		imgSrc: 'https://picsum.photos/151',
+		imgSrc: starMedal.src,
 		imgFallback: 'TM'
 	},
 	{
@@ -39,7 +45,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'reporting',
 		description:
 			'Aprende técnicas de monitoreo y reporting para optimizar el rendimiento de los modelos.',
-		imgSrc: 'https://picsum.photos/152',
+		imgSrc: webcamMedal.src,
 		imgFallback: 'MR'
 	},
 	{
@@ -47,14 +53,14 @@ const items: ITrainingItem[] = [
 		titleStrong: 'modelos',
 		description:
 			'Adquiere habilidades esenciales para iniciar tu carrera como modelo webcam con confianza.',
-		imgSrc: 'https://picsum.photos/153',
+		imgSrc: astronautMedal.src,
 		imgFallback: 'CB'
 	},
 	{
 		title: 'Capacitación avanzada para',
 		titleStrong: 'modelos',
 		description: 'Perfecciona tus técnicas avanzadas para destacar como modelo webcam profesional.',
-		imgSrc: 'https://picsum.photos/154',
+		imgSrc: moneyMedal.src,
 		imgFallback: 'CA'
 	},
 	{
@@ -62,7 +68,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'modelos',
 		description:
 			'Entiende la psicología de los modelos para mejorar su motivación y desempeño profesional.',
-		imgSrc: 'https://picsum.photos/155',
+		imgSrc: spacecraftMedal.src,
 		imgFallback: 'PS'
 	}
 ]

@@ -1,5 +1,5 @@
-import Business from './Business'
 import type { ITrainingCollection } from './Interfaces'
+import Business from './Business'
 import ModelsTrainings from './ModelsTrainings'
 import ModelTrainingPack from './ModelTrainingPack'
 import MonitorTrainingPack from './MonitorTrainingPack'

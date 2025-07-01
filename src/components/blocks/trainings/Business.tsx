@@ -1,13 +1,19 @@
 import type { ITrainingItem } from './Interfaces'
 import { TrainingsCollectionCards } from './TrainingsCollectionCards'
 
+import astronautMedal from '@/assets/medals/medal-astronaut.png'
+import moneyMedal from '@/assets/medals/medal-money.png'
+import spacecraftMedal from '@/assets/medals/medal-spacecraft.png'
+import starMedal from '@/assets/medals/medal-star.png'
+import webcamMedal from '@/assets/medals/medal-webcam.png'
+
 const items: ITrainingItem[] = [
 	{
 		title: 'Cómo ser un estudio',
 		titleStrong: 'exitoso',
 		description:
 			'Aprende estrategias para hacer tu estudio un referente: visión, procesos, equipo y propuesta única.',
-		imgSrc: 'https://picsum.photos/112',
+		imgSrc: astronautMedal.src,
 		imgFallback: 'EX'
 	},
 	{
@@ -15,7 +21,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'perfilación',
 		description:
 			'Domina técnicas de entrevista y perfilación para seleccionar talento que impulse tu estudio.',
-		imgSrc: 'https://picsum.photos/113',
+		imgSrc: moneyMedal.src,
 		imgFallback: 'EP'
 	},
 	{
@@ -23,7 +29,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'de las plataformas',
 		description:
 			'Usa herramientas y software para optimizar operaciones, productividad y decisiones en tu estudio.',
-		imgSrc: 'https://picsum.photos/114',
+		imgSrc: spacecraftMedal.src,
 		imgFallback: 'EP'
 	},
 	{
@@ -31,7 +37,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'modelos y monitores',
 		description:
 			'Forma modelos y monitores con programas que desarrollen habilidades técnicas y de liderazgo.',
-		imgSrc: 'https://picsum.photos/115',
+		imgSrc: starMedal.src,
 		imgFallback: 'CM'
 	},
 	{
@@ -39,7 +45,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'empresa',
 		description:
 			'Crea tu empresa con un plan de negocios sólido, financiamiento y base para el crecimiento.',
-		imgSrc: 'https://picsum.photos/116',
+		imgSrc: webcamMedal.src,
 		imgFallback: 'CE'
 	},
 	{
@@ -47,7 +53,7 @@ const items: ITrainingItem[] = [
 		titleStrong: '',
 		description:
 			'Conoce aspectos legales clave: registros, contratos y cumplimiento para proteger tu estudio.',
-		imgSrc: 'https://picsum.photos/117',
+		imgSrc: astronautMedal.src,
 		imgFallback: 'LG'
 	},
 	{
@@ -55,7 +61,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'estudio',
 		description:
 			'Gestiona finanzas, presupuestos y obligaciones fiscales para la estabilidad de tu estudio.',
-		imgSrc: 'https://picsum.photos/118',
+		imgSrc: moneyMedal.src,
 		imgFallback: 'CO'
 	},
 	{
@@ -63,7 +69,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'corporativa',
 		description:
 			'Crea una marca poderosa con narrativa y diseño que refleje los valores de tu estudio.',
-		imgSrc: 'https://picsum.photos/119',
+		imgSrc: spacecraftMedal.src,
 		imgFallback: 'IM'
 	},
 	{
@@ -71,7 +77,7 @@ const items: ITrainingItem[] = [
 		titleStrong: 'RRSS',
 		description:
 			'Atrae clientes con campañas en redes sociales, contenido optimizado y métricas efectivas.',
-		imgSrc: 'https://picsum.photos/120',
+		imgSrc: starMedal.src,
 		imgFallback: 'MD'
 	},
 	{
@@ -79,7 +85,7 @@ const items: ITrainingItem[] = [
 		titleStrong: '',
 		description:
 			'Optimiza el reclutamiento para atraer talento que potencie el éxito de tu estudio.',
-		imgSrc: 'https://picsum.photos/121',
+		imgSrc: webcamMedal.src,
 		imgFallback: 'RE'
 	}
 ]
