@@ -1,85 +1,210 @@
-/* Layout rules */
-html {
-	@apply scroll-smooth antialiased;
-}
-body {
-	@apply bg-white text-neutral-500 has-[.header\_\_menu--open]:overflow-hidden lg:has-[.header\_\_menu--open]:overflow-auto dark:bg-neutral-950 dark:text-neutral-400 [.dark_&]:text-neutral-400 [.light_&]:text-neutral-500;
+@import 'tailwindcss';
+@import "tw-animate-css";
+@config '@/../tailwind.config.mjs';
+
+@plugin "@tailwindcss/typography";
+
+@source inline("{,lg:}col-span-{1,2,3,4,5,6,7,8,9,10,11,12}");
+@source inline("{,lg:}h-{0,2,3,4,6,8,12,16,24,32}");
+@source inline("{,lg:}text-{xs,sm,base,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl,9xl}");
+@source inline("font-{thin,extralight,light,normal,medium,semibold,bold,extrabold,black}");
+@source inline("text-{left,center,right}");
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	/* background-image by theme */
+	--background-image-stars-dark: url('../assets/backgrounds/bg-img-dark.webp');
+	--background-image-stars: url('../assets/backgrounds/bg-img.webp');
+
+	/* Animaciones (de la migración anterior) */
+	--animate-dropdown: dropdown 300ms ease-in-out forwards;
+	--animate-fadeInShadowLight: fadeInShadowLight 500ms ease-in-out forwards;
+	--animate-fadeInShadowDark: fadeInShadowDark 500ms ease-in-out forwards;
+
+	/* Colores (de la migración anterior) */
+	--color-transparent: transparent;
+	/* Primary palette */
+	--color-primary-50: oklch(0.9789 0.0169 81.93); /* #fef9ee */
+	--color-primary-100: oklch(0.9501 0.0377 82.85); /* #fdf1d7 */
+	--color-primary-200: oklch(0.8982 0.0686 83.67); /* #fae0ae */
+	--color-primary-300: oklch(0.8333 0.1007 83.73); /* #f7c87a */
+	--color-primary-400: oklch(0.7478 0.1328 83.14); /* #f3a744 */
+	--color-primary-500: oklch(0.7029 0.1463 79.74); /* #f0932d */
+	--color-primary-600: oklch(0.6197 0.1485 69.07); /* #e07216 */
+	--color-primary-700: oklch(0.5206 0.1263 59.19); /* #ba5714 */
+	--color-primary-800: oklch(0.4382 0.0988 49.97); /* #944518 */
+	--color-primary-900: oklch(0.3744 0.0876 46.36); /* #773a17 */
+	--color-primary-950: oklch(0.2479 0.0565 38.88); /* #401b0a */
+	/* Neutral palette */
+	--color-neutral-50: oklch(0.9808 0.0065 252.23); /* #f8fafc */
+	--color-neutral-100: oklch(0.9602 0.0086 252.23); /* #f1f5f9 */
+	--color-neutral-200: oklch(0.9128 0.0148 252.23); /* #e2e8f0 */
+	--color-neutral-300: oklch(0.8547 0.0209 252.23); /* #cbd5e1 */
+	--color-neutral-400: oklch(0.7043 0.0258 252.23); /* #94a3b8 */
+	--color-neutral-500: oklch(0.5508 0.0262 252.23); /* #64748b */
+	--color-neutral-600: oklch(0.4527 0.0262 252.23); /* #475569 */
+	--color-neutral-700: oklch(0.3744 0.0262 252.23); /* #334155 */
+	--color-neutral-800: oklch(0.2861 0.0262 252.23); /* #1e293b */
+	--color-neutral-900: oklch(0.2089 0.0262 252.23); /* #0f172a */
+	--color-neutral-950: oklch(0.1118 0.0262 252.23); /* #020617 */
+
+	/* Cursor */
+	--cursor-fancy: url(https://www.svgrepo.com/show/269/color-picker.svg);
 }
 
-/* Main typography */
-p {
-	@apply mb-6 last:mb-0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	@apply font-headings text-neutral-700 last:mb-0 dark:text-neutral-50 [&>strong]:text-primary-500 [.dark_&]:text-neutral-50 [.light_&]:text-neutral-700;
-}
-h1 strong,
-h2 strong,
-h3 strong,
-h4 strong,
-h5 strong,
-h6 strong {
-	font-weight: inherit;
-}
-h1,
-h2,
-h3 {
-	@apply mb-6 font-bold;
+@keyframes dropdown {
+	0% {
+		transform: translateY(-1rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
-h4,
-h5,
-h6 {
-	@apply mb-4 font-semibold;
+@keyframes fadeInShadowLight {
+	100% {
+		box-shadow:
+			0 20px 25px -5px rgba(15, 23, 42, 0.025),
+			0 8px 10px -6px rgba(15, 23, 42, 0.025);
+	}
 }
 
-h1 {
-	@apply text-4xl lg:text-6xl;
+@keyframes fadeInShadowDark {
+	100% {
+		box-shadow:
+			0 20px 25px -5px rgba(2, 6, 23, 0.25),
+			0 8px 10px -6px rgba(2, 6, 23, 0.25);
+	}
 }
 
-h2 {
-	@apply text-3xl lg:text-5xl;
+@utility animate-dropdown {
+	animation: var(--animate-dropdown);
+}
+@utility animate-fadeInShadowLight {
+	animation: var(--animate-fadeInShadowLight);
+}
+@utility animate-fadeInShadowDark {
+	animation: var(--animate-fadeInShadowDark);
+}
+@utility peer-required-after-required {
+	@apply peer-required:after:text-red-500 peer-required:after:content-['\00a0*'];
 }
 
-h3 {
-	@apply text-2xl lg:text-3xl;
+@theme inline {
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--color-chart-1: var(--chart-1);
+	--color-chart-2: var(--chart-2);
+	--color-chart-3: var(--chart-3);
+	--color-chart-4: var(--chart-4);
+	--color-chart-5: var(--chart-5);
+	--color-sidebar: var(--sidebar);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
 }
 
-h4 {
-	@apply text-xl lg:text-2xl;
+:root {
+	--radius: 0.625rem;
+	--background: oklch(1 0 0);
+	--foreground: oklch(0.145 0 0);
+	--card: oklch(1 0 0);
+	--card-foreground: oklch(0.145 0 0);
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0.145 0 0);
+	--primary: oklch(0.205 0 0);
+	--primary-foreground: oklch(0.985 0 0);
+	--secondary: oklch(0.97 0 0);
+	--secondary-foreground: oklch(0.205 0 0);
+	--muted: oklch(0.97 0 0);
+	--muted-foreground: oklch(0.556 0 0);
+	--accent: oklch(0.97 0 0);
+	--accent-foreground: oklch(0.205 0 0);
+	--destructive: oklch(0.577 0.245 27.325);
+	--border: oklch(0.922 0 0);
+	--input: oklch(0.922 0 0);
+	--ring: oklch(0.708 0 0);
+	--chart-1: oklch(0.646 0.222 41.116);
+	--chart-2: oklch(0.6 0.118 184.704);
+	--chart-3: oklch(0.398 0.07 227.392);
+	--chart-4: oklch(0.828 0.189 84.429);
+	--chart-5: oklch(0.769 0.188 70.08);
+	--sidebar: oklch(0.985 0 0);
+	--sidebar-foreground: oklch(0.145 0 0);
+	--sidebar-primary: oklch(0.205 0 0);
+	--sidebar-primary-foreground: oklch(0.985 0 0);
+	--sidebar-accent: oklch(0.97 0 0);
+	--sidebar-accent-foreground: oklch(0.205 0 0);
+	--sidebar-border: oklch(0.922 0 0);
+	--sidebar-ring: oklch(0.708 0 0);
 }
 
-h5 {
-	@apply text-lg lg:text-xl;
+.dark {
+	--background: oklch(0.145 0 0);
+	--foreground: oklch(0.985 0 0);
+	--card: oklch(0.205 0 0);
+	--card-foreground: oklch(0.985 0 0);
+	--popover: oklch(0.205 0 0);
+	--popover-foreground: oklch(0.985 0 0);
+	--primary: oklch(0.922 0 0);
+	--primary-foreground: oklch(0.205 0 0);
+	--secondary: oklch(0.269 0 0);
+	--secondary-foreground: oklch(0.985 0 0);
+	--muted: oklch(0.269 0 0);
+	--muted-foreground: oklch(0.708 0 0);
+	--accent: oklch(0.269 0 0);
+	--accent-foreground: oklch(0.985 0 0);
+	--destructive: oklch(0.704 0.191 22.216);
+	--border: oklch(1 0 0 / 10%);
+	--input: oklch(1 0 0 / 15%);
+	--ring: oklch(0.556 0 0);
+	--chart-1: oklch(0.488 0.243 264.376);
+	--chart-2: oklch(0.696 0.17 162.48);
+	--chart-3: oklch(0.769 0.188 70.08);
+	--chart-4: oklch(0.627 0.265 303.9);
+	--chart-5: oklch(0.645 0.246 16.439);
+	--sidebar: oklch(0.205 0 0);
+	--sidebar-foreground: oklch(0.985 0 0);
+	--sidebar-primary: oklch(0.488 0.243 264.376);
+	--sidebar-primary-foreground: oklch(0.985 0 0);
+	--sidebar-accent: oklch(0.269 0 0);
+	--sidebar-accent-foreground: oklch(0.985 0 0);
+	--sidebar-border: oklch(1 0 0 / 10%);
+	--sidebar-ring: oklch(0.556 0 0);
 }
 
-h6 {
-	@apply text-base lg:text-lg;
-}
-main a {
-	@apply text-primary-500 hover:text-primary-600;
-}
-.highlight {
-	@apply text-primary-500;
-}
-.small {
-	@apply text-sm font-normal text-neutral-400 dark:text-neutral-500;
-}
-/* Global basic styling */
-.basic-text {
-	@apply [&_blockquote]:relative [&_blockquote]:mb-6 [&_blockquote]:rounded [&_blockquote]:border [&_blockquote]:border-neutral-100 [&_blockquote]:bg-neutral-50 [&_blockquote]:p-6 [&_blockquote]:text-lg [&_blockquote]:leading-relaxed [&_blockquote]:text-neutral-700 [&_blockquote]:before:absolute [&_blockquote]:before:left-0 [&_blockquote]:before:top-0 [&_blockquote]:before:z-[0] [&_blockquote]:before:block [&_blockquote]:before:text-9xl [&_blockquote]:before:italic [&_blockquote]:before:text-neutral-200 [&_blockquote]:before:opacity-50 [&_blockquote]:before:content-['"'] lg:[&_blockquote]:-mx-12 dark:[&_blockquote]:border-neutral-600 dark:[&_blockquote]:bg-neutral-700 dark:[&_blockquote]:text-neutral-50 dark:[&_blockquote]:before:text-neutral-600 [&_blockquote_p]:relative [&_blockquote_p]:z-[1] [&_blockquote_p]:px-6 [&_h1:not(:first-child)]:mt-24 [&_h2:not(:first-child)]:mt-24 [&_h3:not(:first-child)]:mt-24 [&_h4:not(:first-child)]:mt-12 [&_img]:rounded [&_img]:border [&_img]:border-neutral-100 dark:[&_img]:border-neutral-600 [&_li]:mb-2 [&_li]:ml-4 [&_li]:list-disc [&_li]:marker:text-primary-500 lg:[&_p:has(img)]:-mx-12;
-}
-.basic-text--lg {
-	@apply text-lg leading-relaxed [&_blockquote]:text-xl [&_blockquote]:leading-loose;
-}
-
-/* Scroll animations */
-/* To disable scroll animations remove the class "sroll-animation" from root html in the layout file */
-.scroll-animation .col {
-	@apply translate-y-4 transform opacity-0 transition-all duration-1000 [&.scroll-animated]:translate-y-0 [&.scroll-animated]:opacity-100 [&:nth-child(1)]:delay-[50ms] [&:nth-child(10)]:delay-[725ms] [&:nth-child(11)]:delay-[800ms] [&:nth-child(12)]:delay-[875ms] [&:nth-child(2)]:delay-[125ms] [&:nth-child(3)]:delay-[200ms] [&:nth-child(4)]:delay-[275ms] [&:nth-child(5)]:delay-[350ms] [&:nth-child(6)]:delay-[425ms] [&:nth-child(7)]:delay-[500ms] [&:nth-child(8)]:delay-[575ms] [&:nth-child(9)]:delay-[650ms];
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+	}
+  body {
+    @apply bg-background text-foreground;
+	}
 }

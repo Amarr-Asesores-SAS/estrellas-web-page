@@ -11,8 +11,10 @@
       "@pages/*": ["./src/pages/*"],
       "@styles/*": ["./src/styles/*"],
       "@utils/*": ["./src/utils/*"]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
-  "include": [".astro/types.d.ts", "**/*"],
+  "include": [".astro/types.d.ts", "**/*", "**/*.tsx", "**/*.jsx"],
   "exclude": ["dist"]
 }

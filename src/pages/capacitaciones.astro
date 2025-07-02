@@ -1,0 +1,28 @@
+---
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+// - UI
+import Hero from '../components/blocks/hero/PageHeader.astro'
+import CTA from '../components/blocks/CTA/BasicDark.astro'
+import Trainings from '@/components/blocks/trainings/Trainings.astro'
+
+// Content
+// - SEO
+const SEO = {
+	title: 'EW | Capacitaciones',
+	description:
+		'Conoce todas nuestras capacitaciones diseñadas especialmente para tu crecimiento en la industria del modelaje webcam'
+}
+// - Page Header
+const header = {
+	title:
+		'<strong>Capacitate</strong> con nosotros y conviértete en una <strong>Estrella Webcam</strong>'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero title={header.title} />
+	<Trainings />
+	<CTA />
+</Layout>
