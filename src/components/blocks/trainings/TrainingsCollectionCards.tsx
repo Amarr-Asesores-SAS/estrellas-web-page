@@ -8,14 +8,16 @@ interface Props {
 }
 export const TrainingsCollectionCards = ({ items }: Props) => {
 	return (
-		<>
+		<div className="flex flex-wrap justify-center gap-4">
 			{items.map((item, index) => {
 				const isRight = index % 2 !== 0 ? true : false
 				return (
-					<Card className="my-1" key={item.title}>
-						<div className={`flex justify-between ${isRight ? 'flex-row-reverse' : ''}`}>
-							<CardHeader className="flex w-full flex-col items-center justify-center">
-								<Avatar className="h-28 w-28">
+					<Card className="items-center md:w-[calc(50%-0.5rem)] md:flex-none" key={item.title}>
+						<div
+							className={`mx-6 flex h-full justify-between gap-4 ${isRight ? 'flex-row-reverse' : ''}`}
+						>
+							<CardHeader className="flex w-full flex-col items-center justify-center px-0">
+								<Avatar className="h-fit w-full">
 									<AvatarImage src={item.imgSrc} />
 									<AvatarFallback>{item.imgFallback}</AvatarFallback>
 								</Avatar>
@@ -31,7 +33,7 @@ export const TrainingsCollectionCards = ({ items }: Props) => {
 								)}
 							</CardHeader>
 							<CardContent
-								className={`flex min-w-3/4 flex-col ${isRight ? 'items-start' : 'items-end'}`}
+								className={`flex min-w-3/4 flex-col justify-between px-0 ${isRight ? 'items-start' : 'items-end'}`}
 							>
 								<CardTitle className="pb-4">
 									<h5>
@@ -45,6 +47,6 @@ export const TrainingsCollectionCards = ({ items }: Props) => {
 					</Card>
 				)
 			})}
-		</>
+		</div>
 	)
 }

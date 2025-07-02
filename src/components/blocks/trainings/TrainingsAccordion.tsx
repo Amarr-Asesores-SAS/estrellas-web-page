@@ -9,7 +9,12 @@ import { trainingItems as items } from './trainingsInfo'
 
 function TrainingsAccordion() {
 	return (
-		<Accordion type="single" collapsible defaultValue="item-1">
+		<Accordion
+			type="single"
+			collapsible
+			defaultValue="item-1"
+			className="mx-auto w-10/12 lg:w-full"
+		>
 			{items.map((item, index) => {
 				const { title, content: Content } = item
 				return (
