@@ -18,7 +18,11 @@ function TrainingsAccordion() {
 			{items.map((item, index) => {
 				const { title, content: Content } = item
 				return (
-					<AccordionItem key={`item-${index + 1}`} value={`item-${index + 1}`}>
+					<AccordionItem
+						className="animate-dropdown"
+						key={`item-${index + 1}`}
+						value={`item-${index + 1}`}
+					>
 						<AccordionTrigger>
 							<h3>
 								<strong>{title}</strong>

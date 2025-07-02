@@ -17,7 +17,7 @@ export const TrainingsCollectionCards = ({ items }: Props) => {
 							className={`mx-6 flex h-full justify-between gap-4 ${isRight ? 'flex-row-reverse' : ''}`}
 						>
 							<CardHeader className="flex w-full flex-col items-center justify-center px-0">
-								<Avatar className="h-fit w-full">
+								<Avatar className="h-fit w-full animate-bounce hover:animate-spin">
 									<AvatarImage src={item.imgSrc} />
 									<AvatarFallback>{item.imgFallback}</AvatarFallback>
 								</Avatar>
