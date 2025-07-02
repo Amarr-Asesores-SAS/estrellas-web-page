@@ -1,11 +1,11 @@
 import type { ITrainingItem } from './Interfaces'
 import { TrainingsCollectionCards } from './TrainingsCollectionCards'
 
-import astronautMedal from '@/assets/medals/medal-astronaut.png'
-import moneyMedal from '@/assets/medals/medal-money.png'
-import spacecraftMedal from '@/assets/medals/medal-spacecraft.png'
-import starMedal from '@/assets/medals/medal-star.png'
-import webcamMedal from '@/assets/medals/medal-webcam.png'
+import astronautMedal from '@/assets/medals/medal-astronaut.webp'
+import moneyMedal from '@/assets/medals/medal-money.webp'
+import spacecraftMedal from '@/assets/medals/medal-spacecraft.webp'
+import starMedal from '@/assets/medals/medal-star.webp'
+import webcamMedal from '@/assets/medals/medal-webcam.webp'
 
 const items: ITrainingItem[] = [
 	{
