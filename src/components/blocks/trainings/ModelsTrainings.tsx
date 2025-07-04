@@ -79,14 +79,14 @@ const items: ITrainingItem[] = [
 			'https://api.whatsapp.com/send?phone=573104137626&text=⭐ Vengo desde la web de estrellaswebcam.com. Me interesa la capacitación "Tolerancia a la frustración" 💪'
 	},
 	{
-		title: 'Bola de nieve',
-		titleStrong: '(LIVIDO)',
+		title: 'Efecto bola de',
+		titleStrong: 'Nieve',
 		description:
-			'Aprende técnicas para mantener el interés y aumentar la interacción en tus sesiones en vivo.',
+			'Aprende a generar interacciones crecientes para maximizar el impacto de tus sesiones webcam.',
 		imgSrc: spacecraftMedal.src,
 		imgFallback: 'BN',
 		actionLink:
-			'https://api.whatsapp.com/send?phone=573104137626&text=⭐ Vengo desde la web de estrellaswebcam.com. Me interesa la capacitación "Bola de nieve (LIVIDO)" 🎥'
+			'https://api.whatsapp.com/send?phone=573104137626&text=⭐ Vengo desde la web de estrellaswebcam.com. Me interesa la capacitación "Efecto Bola de Nieve" 🎥'
 	},
 	{
 		title: 'Automaquillaje',
