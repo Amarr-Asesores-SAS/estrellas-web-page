@@ -1,0 +1,29 @@
+---
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+// - UI
+import Hero from '../components/blocks/hero/PageHeader.astro'
+import CTA from '../components/blocks/CTA/BasicDark.astro'
+import Downloads from '@/components/blocks/downloads/Downloads.astro'
+
+// Content
+// - SEO
+const SEO = {
+	title: 'EW | Descargas',
+	description:
+		'Encuentra todas las herramientas que tenemos para facilitar tu trabajo como modelo webcam'
+}
+// - Page Header
+const header = {
+	title:
+		'<strong>Herramientas</strong> para convertirte en la <strong>Estrella Webcam</strong> mas brillante',
+	description: 'Estas son las herramientas que hemos creado para ayudarte.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero title={header.title} text={header.description} />
+	<Downloads />
+	<CTA />
+</Layout>
