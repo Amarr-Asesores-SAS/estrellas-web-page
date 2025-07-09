@@ -18,6 +18,7 @@ interface Action {
 }
 interface HeaderImg {
 	src: string
+	bgColor?: string
 	fallback: string
 }
 
@@ -36,7 +37,7 @@ const NewCard = (props: Props) => {
 		<Card>
 			<CardHeader className="flex items-center gap-4">
 				{headerImg && (
-					<Avatar className="h-14 w-14">
+					<Avatar className={`h-14 w-14 p-2 ${headerImg.bgColor ?? 'bg-transparent'}`}>
 						<AvatarImage src={headerImg.src} />
 						<AvatarFallback>{headerImg.fallback} </AvatarFallback>
 					</Avatar>

@@ -1,0 +1,49 @@
+---
+import NewCard from '@/components/ui/cards/newCard/NewCard'
+import sctoolsLogo from '@/assets/apps/icons/sctools-icon.webp'
+import monitorToolsLogo from '@/assets/apps/icons/monitor-tools-icon.webp'
+
+const scTools = {
+	headerImg: {
+		src: sctoolsLogo.src,
+		fallback: 'SC',
+		bgColor: 'bg-white'
+	},
+	action: {
+		link: 'https://estrellaswebcam.com/downloads/sctools/sctools-lts.zip',
+		label: 'Descargar'
+	}
+}
+
+const monitorTools = {
+	headerImg: {
+		src: monitorToolsLogo.src,
+		fallback: 'MT'
+	},
+	action: {
+		link: 'https://estrellaswebcam.com/downloads/monitortools/monitor-tools-lts.zip',
+		label: 'Descargar'
+	}
+}
+---
+
+<div class="mx-auto my-8 w-full lg:my-16">
+	<div class="mx-auto w-10/12 lg:w-2/3">
+		<h2>Para Modelos</h2>
+		<NewCard
+			title="ScTools"
+			description="Esta extensión mejora la interface de usuario en algunos camsites, ademas de ayudar funcionalidades como mensajes rápidos transversales entre camsites"
+			headerImg={scTools.headerImg}
+			action={scTools.action}
+			client:load
+		/>
+		<h2 class="mt-4">Para Monitores</h2>
+		<NewCard
+			title="Monitor Tools"
+			description="Facilita el trabajo de tus monitores para reportes de modelos de manera rápida y fácil."
+			headerImg={monitorTools.headerImg}
+			action={monitorTools.action}
+			client:load
+		/>
+	</div>
+</div>
