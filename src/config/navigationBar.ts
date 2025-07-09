@@ -49,10 +49,10 @@ export const navigationBarData: NavData = {
 			name: 'Mas',
 			link: '#',
 			submenu: [
-				{ name: 'Blog', link: '/blog' },
+				{ name: 'Planes', link: '/planes' },
+				{ name: 'Descargas', link: '/descargas' },
 				{ name: 'Familia Estrellas Webcam', link: '/familia' },
-				{ name: 'Beneficios', link: '/beneficios' },
-				{ name: 'Planes', link: '/planes' }
+				{ name: 'Beneficios', link: '/beneficios' }
 			]
 		},
 		{ name: 'Contacto', link: socialURLs.whatsapp, target: '_blank' }
