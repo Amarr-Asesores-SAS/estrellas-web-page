@@ -16,5 +16,5 @@
     "jsxImportSource": "react"
   },
   "include": [".astro/types.d.ts", "**/*", "**/*.tsx", "**/*.jsx"],
-  "exclude": ["dist"]
+  "exclude": ["estrellaswebcam.com"]
 }
