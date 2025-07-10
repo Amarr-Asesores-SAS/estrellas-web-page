@@ -2,6 +2,7 @@
 import NewCard from '@/components/ui/cards/newCard/NewCard'
 import sctoolsLogo from '@/assets/apps/icons/sctools-icon.webp'
 import monitorToolsLogo from '@/assets/apps/icons/monitor-tools-icon.webp'
+import { version } from 'typescript'
 
 const scTools = {
 	headerImg: {
@@ -10,9 +11,10 @@ const scTools = {
 		bgColor: 'bg-white'
 	},
 	action: {
-		link: 'https://estrellaswebcam.com/downloads/sctools/sctools-lts.zip',
+		link: '/downloads/sctools/sctools-lts.zip',
 		label: 'Descargar'
-	}
+	},
+	version: '1.0.0'
 }
 
 const monitorTools = {
@@ -21,9 +23,10 @@ const monitorTools = {
 		fallback: 'MT'
 	},
 	action: {
-		link: 'https://estrellaswebcam.com/downloads/monitortools/monitor-tools-lts.zip',
+		link: '/downloads/monitortools/monitor-tools-0.1.0.zip',
 		label: 'Descargar'
-	}
+	},
+	version: '0.1.0'
 }
 ---
 
@@ -35,6 +38,7 @@ const monitorTools = {
 			description="Esta extensión mejora la interface de usuario en algunos camsites, ademas de ayudar funcionalidades como mensajes rápidos transversales entre camsites"
 			headerImg={scTools.headerImg}
 			action={scTools.action}
+			version={scTools.version}
 			client:load
 		/>
 		<h2 class="mt-4">Para Monitores</h2>
@@ -43,6 +47,7 @@ const monitorTools = {
 			description="Facilita el trabajo de tus monitores para reportes de modelos de manera rápida y fácil."
 			headerImg={monitorTools.headerImg}
 			action={monitorTools.action}
+			version={monitorTools.version}
 			client:load
 		/>
 	</div>

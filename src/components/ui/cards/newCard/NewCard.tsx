@@ -29,10 +29,11 @@ interface Props {
 	action?: Action
 	content?: ComponentType
 	footer?: ComponentType
+	version?: string
 }
 
 const NewCard = (props: Props) => {
-	const { title, description, content: Content, footer: Footer, headerImg, action } = props
+	const { title, description, version, content: Content, footer: Footer, headerImg, action } = props
 	return (
 		<Card>
 			<CardHeader className="flex items-center gap-4">
@@ -48,12 +49,14 @@ const NewCard = (props: Props) => {
 						{description && <CardDescription>{description}</CardDescription>}
 					</div>
 					{action && (
-						<CardAction>
+						<CardAction className="items flex flex-col justify-center">
 							<a className="h-full" href={action.link} target={action.target || '_blank'}>
 								<Button variant={'link'} className="capitalize">
 									{action.label}
 								</Button>
 							</a>
+
+							<span className="text-center text-xs">{`v ${version ?? '0.0.0'}`}</span>
 						</CardAction>
 					)}
 				</div>
