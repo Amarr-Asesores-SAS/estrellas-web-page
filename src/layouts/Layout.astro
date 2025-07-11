@@ -10,7 +10,8 @@ import Header from '../components/blocks/head/Header.astro'
 import Scriprs from '../components/scripts/LocalScripts.astro'
 import GoogleTagManagerBody from '../components/scripts/googleTagManagerBody.astro'
 // Styles
-import '../styles/global.css'
+import '@/styles/general.css'
+import '@/styles/global.css'
 // Fonts
 import '@fontsource-variable/inter'
 import '@fontsource-variable/outfit'
@@ -29,7 +30,7 @@ const { title, description, ogImage, noindex } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-animation mode-auto">
+<html lang="en" class="scroll-animation mode-auto dark">
 	<Header title={title} description={description} ogImage={ogImage} noindex={noindex} />
 	<body
 		class:list={[
@@ -50,7 +51,8 @@ const { title, description, ogImage, noindex } = Astro.props
 </html>
 
 <style>
+	@reference '@/styles/global.css';
 	.bg-stars-image {
-		@apply bg-stars bg-cover bg-fixed bg-center bg-no-repeat dark:bg-stars-dark;
+		@apply bg-stars dark:bg-stars-dark bg-cover bg-fixed bg-center bg-no-repeat;
 	}
 </style>

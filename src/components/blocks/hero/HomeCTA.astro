@@ -24,6 +24,7 @@ import heroImage from '@/assets/hero-astronauts.png'
 import user1 from '../../../assets/avatars/avatar-01.webp'
 import user2 from '../../../assets/avatars/avatar-02.webp'
 import user3 from '../../../assets/avatars/avatar-03.webp'
+import BounceArrow from '@/components/ui/BounceArrow.astro'
 const avatars = [
 	{ image: { src: user1.src, alt: 'user name' }, link: '/' },
 	{ image: { src: user2.src, alt: 'user name' }, link: '/' },
@@ -39,8 +40,10 @@ const avatars = [
 		width="1920"
 		alt="Astronautas trabajando en las estrellas"
 		format="webp"
-		class="mask-y-linear-70"
+		class="mask-y-linear-70 min-h-[85vh] min-w-screen object-cover"
 	/>
+	<BounceArrow />
+
 	<Section id="intro" padding="top" classes="bg-transparent">
 		<Row>
 			<Col span="2" />
@@ -64,6 +67,7 @@ const avatars = [
 </div>
 
 <style>
+	@reference '@/styles/global.css';
 	.mask-y-linear-70 {
 		mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
 	}

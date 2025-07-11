@@ -108,6 +108,7 @@
 <script>
 	if (document.documentElement.classList.contains('mode-auto')) {
 		const applyTheme = () => {
+			if (!localStorage.theme) return
 			if (
 				localStorage.theme === 'dark' ||
 				(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
@@ -121,12 +122,13 @@
 			const themeSwitcher = document.getElementById('theme-selector')
 			if (themeSwitcher) {
 				themeSwitcher.addEventListener('click', () => {
+					const html = document.documentElement
 					if (localStorage.theme === 'dark') {
 						localStorage.theme = 'light'
-						document.documentElement.classList.remove('dark')
+						html.classList.remove('dark')
 					} else {
 						localStorage.theme = 'dark'
-						document.documentElement.classList.add('dark')
+						html.classList.add('dark')
 					}
 				})
 			}
